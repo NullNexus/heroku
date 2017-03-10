@@ -1,20 +1,19 @@
-import React from 'react'
-import { Link } from 'react-router'
+import React from 'react';
+import Head from '../Header';
+// app component
 
-export default class App extends React.Component {
-  render() {
-    return (
-      <div>
-        <h1>App</h1>
-        <ul>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/about">About (lazy loaded)</Link></li>
-          <li><Link to="/frasier">Frasier (lazy loaded)</Link></li>
-        </ul>
-        {this.props.children}
-      </div>
-    )
-  }
-}
+const App = ({ children }) => (
+  <div>
+    <Head />
+    {children}
+  </div>
+);
 
+/*  React.PropTypes exports a range of validators that can be used to make sure the data
+    you receive is valid.
+*/
+App.propTypes = {
+  children: React.PropTypes.node.isRequired,
+};
 
+export default App;
