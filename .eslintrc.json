@@ -1,0 +1,33 @@
+{
+  "env": {
+    "browser": true,
+    "node": true
+    },
+  "parser": "babel-eslint",
+  "extends": "airbnb",
+  "plugins": [
+    "react",
+    "jsx-a11y",
+    "import"
+  ],
+  "rules": {
+    // If you aren’t concerned about having different line endings within you code, then you can safely turn this rule off.
+    "linebreak-style": 0,
+    // If you are developing for Node.js then you most likely do not want this rule enabled.
+    "no-console":0,
+    // If you don't care about restricting the file extensions that may contain JSX.
+    "react/jsx-filename-extension": 0,
+    // If you are not concerned about a consistent usage of file extension.
+    "import/extensions": 0,
+    // False positive reports of missing dependencies.
+    "import/no-unresolved": 0,
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": true,
+        "optionalDependencies": false,
+        "peerDependencies": false
+      }
+    ]
+  }
+}
